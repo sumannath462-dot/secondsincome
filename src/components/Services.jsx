@@ -55,8 +55,8 @@ function Services() {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white">
-            Our Services
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+  Our Services
           </h2>
 
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
@@ -72,10 +72,12 @@ function Services() {
 
             return (
               <div
-                key={index}
-                className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
-              >
-                <Icon size={42} className="text-blue-400 mb-6" />
+  key={index}
+  className="group rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]"
+>
+                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-all duration-300">
+  <Icon size={34} className="text-blue-400" />
+</div>
 
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {service.title}

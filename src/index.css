@@ -1,4 +1,30 @@
 @import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #2563eb;
+  color: white;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button {
+  transition: all 0.3s ease;
 }

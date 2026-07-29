@@ -1,111 +1,137 @@
-import heroImage from "../assets/hero-dashboard.png";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+} from "lucide-react";
 
-function Hero() {
+import heroImage from "../assets/hero-secondsincome.png";
+
+export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden"
+      className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-24 pb-20"
     >
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Background Blur */}
+      <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-blue-200/30 blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-cyan-200/30 blur-3xl"></div>
 
-          {/* Left Side */}
+      <div className="container mx-auto px-5 sm:px-6">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+          {/* Left Content */}
           <div>
 
-            <span className="inline-flex items-center bg-blue-500/20 border border-blue-400 text-blue-300 px-5 py-2 rounded-full text-sm font-medium mb-6">
-              🚀 AI • Automation • Websites • SEO
-            </span>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
+              <Sparkles size={16} />
+              AI • Automation • Websites • SEO
+            </div>
 
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
+            {/* Heading */}
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl md:text-6xl">
               Build Your{" "}
-              <span className="text-blue-400">Second Income</span>
-              <br />
+              <span className="text-blue-600">
+                Second Income
+              </span>{" "}
               with AI
             </h1>
 
-            <p className="mt-8 text-xl text-gray-300 leading-8">
-              Learn AI, Automation, Freelancing and Digital Business
-              strategies to build multiple income streams and grow
-              your business faster.
+            {/* Description */}
+            <p className="mt-6 max-w-xl text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
+              Learn AI, automation, freelancing, website development,
+              and digital growth strategies to create multiple income
+              streams and grow your business faster.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mt-10">
-
-              <a
-                href="#services"
-                className="inline-block bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold transition"
-              >
-                🚀 Get Started
-              </a>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
               <a
                 href="#contact"
-                className="inline-block border border-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-xl font-semibold transition"
+                className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition duration-300 hover:bg-blue-700"
               >
-                📅 Book Free Call
+                Get Started
+                <ArrowRight className="ml-2" size={18} />
+              </a>
+
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center rounded-xl border border-gray-300 px-7 py-4 font-semibold text-gray-700 transition duration-300 hover:border-blue-600 hover:text-blue-600"
+              >
+                Explore Services
               </a>
 
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-14">
+            {/* Features */}
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
 
-              <div>
-                <h2 className="text-4xl font-bold text-blue-400">
-                  100+
-                </h2>
-                <p className="text-gray-300">
-                  Projects
-                </p>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-blue-600" size={20} />
+                <span className="text-sm text-gray-700 sm:text-base">
+                  AI Automation
+                </span>
               </div>
 
-              <div>
-                <h2 className="text-4xl font-bold text-blue-400">
-                  24/7
-                </h2>
-                <p className="text-gray-300">
-                  Support
-                </p>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-blue-600" size={20} />
+                <span className="text-sm text-gray-700 sm:text-base">
+                  Modern Websites
+                </span>
               </div>
 
-              <div>
-                <h2 className="text-4xl font-bold text-blue-400">
-                  AI
-                </h2>
-                <p className="text-gray-300">
-                  Solutions
-                </p>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-blue-600" size={20} />
+                <span className="text-sm text-gray-700 sm:text-base">
+                  SEO Growth
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-blue-600" size={20} />
+                <span className="text-sm text-gray-700 sm:text-base">
+                  Freelancing Guidance
+                </span>
               </div>
 
             </div>
 
           </div>
 
-          {/* Right Side */}
-          <div className="relative flex justify-center">
+          {/* Right Content */}
+          <div className="relative flex justify-center lg:justify-end">
 
+            {/* Hero Image */}
             <img
               src={heroImage}
-              alt="AI Dashboard"
-              className="w-full max-w-xl rounded-3xl shadow-2xl"
+              alt="SecondsIncome Hero"
+              className="w-full max-w-[620px] rounded-[24px] object-cover shadow-2xl transition-all duration-500 hover:scale-[1.02] md:rounded-[32px]"
             />
 
-            {/* Floating Card */}
-            <div className="absolute -bottom-8 -left-6 bg-white text-slate-900 rounded-2xl shadow-2xl p-6 w-72">
+            {/* Top Card */}
+            <div className="absolute top-3 right-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-3 text-white shadow-xl transition-all duration-300 hover:-translate-y-2 sm:top-6 sm:right-6 sm:rounded-2xl sm:px-6 sm:py-5">
 
-              <h3 className="text-xl font-bold mb-4">
-                Why SecondsIncome?
+              <h3 className="text-2xl font-bold sm:text-3xl">
+                24/7
               </h3>
 
-              <ul className="space-y-3">
-                <li>🤖 AI Automation</li>
-                <li>💻 Website Development</li>
-                <li>📈 SEO Growth</li>
-                <li>💬 AI Chatbots</li>
-                <li>⚙️ Business Automation</li>
-                <li>🧠 AI Consulting</li>
-              </ul>
+              <p className="mt-1 text-sm text-blue-100">
+                Support Available
+              </p>
+
+            </div>
+
+            {/* Bottom Card */}
+            <div className="absolute bottom-4 right-4 rounded-xl bg-white/95 px-4 py-3 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 sm:bottom-8 sm:right-8 sm:rounded-2xl sm:px-6 sm:py-5 sm:shadow-2xl">
+
+              <h3 className="text-3xl font-bold text-blue-600 sm:text-4xl">
+                100+
+              </h3>
+
+              <p className="mt-1 text-sm text-gray-600 sm:text-base">
+                Projects Completed
+              </p>
 
             </div>
 
@@ -116,5 +142,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;
