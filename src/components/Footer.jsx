@@ -1,139 +1,154 @@
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUp,
-  MessageCircle,
-} from "lucide-react";
-
-import { FaLinkedin } from "react-icons/fa";
+import { ArrowUp, Mail, MapPin } from "lucide-react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden bg-slate-950 text-gray-300">
-      {/* Background Blur */}
-      <div className="absolute -top-20 left-0 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl"></div>
-
-      <div className="relative mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-slate-950 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Company */}
           <div>
             <h2 className="text-3xl font-bold text-white">
-              Seconds
-              <span className="text-blue-500">Income</span>
+              Seconds<span className="text-blue-500">Income</span>
             </h2>
 
-            <p className="mt-5 leading-7 text-gray-400">
-              Helping individuals, freelancers, startups and businesses
-              grow through AI, Automation, Website Development,
-              SEO and Digital Marketing.
+            <p className="text-gray-400 mt-5 leading-7">
+              Helping startups, entrepreneurs and businesses grow with
+              modern websites, AI automation, SEO and digital solutions.
             </p>
 
-            {/* Social Icons */}
-            <div className="mt-8 flex gap-4">
+            <div className="mt-6 p-5 rounded-2xl bg-slate-900 border border-slate-800">
+              <h4 className="text-white font-semibold">
+                Founder
+              </h4>
 
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/kripamay-nath/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-white/10 p-3 transition duration-300 hover:bg-[#0A66C2]"
-              >
-                <FaLinkedin className="h-5 w-5 text-white" />
-              </a>
+              <p className="text-blue-400 mt-2">
+                Kripamay Nath
+              </p>
 
-              {/* WhatsApp */}
-              <a
-                href="https://chat.whatsapp.com/BodKOEmlZOC3CJkyOcbhYE?s=sh&p=a&ilr=1&amv=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-white/10 p-3 transition duration-300 hover:bg-green-600"
-              >
-                <MessageCircle className="h-5 w-5 text-white" />
-              </a>
+              <p className="text-gray-500 text-sm mt-2">
+                Banking Professional (2013–2025)
+              </p>
 
-              {/* Email */}
-              <a
-                href="mailto:kripamaynath@outlook.com"
-                className="rounded-xl bg-white/10 p-3 transition duration-300 hover:bg-red-500"
-              >
-                <Mail className="h-5 w-5 text-white" />
-              </a>
-
+              <p className="text-gray-500 text-sm">
+                AI • Websites • Automation
+              </p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-5 text-xl font-semibold text-white">
+            <h3 className="text-white font-semibold text-xl mb-5">
               Quick Links
             </h3>
 
             <ul className="space-y-3">
-              <li><a href="#home" className="hover:text-blue-400 transition">Home</a></li>
-              <li><a href="#services" className="hover:text-blue-400 transition">Services</a></li>
-              <li><a href="#pricing" className="hover:text-blue-400 transition">Pricing</a></li>
-              <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
-              <li><a href="#contact" className="hover:text-blue-400 transition">Contact</a></li>
+              <li>
+                <a href="#home" className="text-gray-400 hover:text-blue-400 transition">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="#services" className="text-gray-400 hover:text-blue-400 transition">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="#portfolio" className="text-gray-400 hover:text-blue-400 transition">
+                  Portfolio
+                </a>
+              </li>
+
+              <li>
+                <a href="#pricing" className="text-gray-400 hover:text-blue-400 transition">
+                  Pricing
+                </a>
+              </li>
+
+              <li>
+                <a href="#about" className="text-gray-400 hover:text-blue-400 transition">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="#contact" className="text-gray-400 hover:text-blue-400 transition">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="mb-5 text-xl font-semibold text-white">
-              Our Services
+            <h3 className="text-white font-semibold text-xl mb-5">
+              Services
             </h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li>AI Automation</li>
               <li>Website Development</li>
+              <li>Landing Page Design</li>
+              <li>AI Automation</li>
               <li>SEO Optimization</li>
-              <li>Digital Marketing</li>
-              <li>Freelancing Guidance</li>
+              <li>Excel Dashboard</li>
+              <li>Power BI Dashboard</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-
-            <h3 className="mb-5 text-xl font-semibold text-white">
+            <h3 className="text-white font-semibold text-xl mb-5">
               Contact
             </h3>
 
             <div className="space-y-5">
-
               <div className="flex items-center gap-3">
-                <Mail className="text-blue-500" size={18} />
+                <Mail className="text-blue-400" size={18} />
 
                 <a
                   href="mailto:kripamaynath@outlook.com"
-                  className="transition hover:text-blue-400"
+                  className="text-gray-400 hover:text-white transition"
                 >
                   kripamaynath@outlook.com
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="text-blue-500" size={18} />
+                <MapPin className="text-blue-400" size={18} />
 
-                <a
-                  href="https://chat.whatsapp.com/BodKOEmlZOC3CJkyOcbhYE?s=sh&p=a&ilr=1&amv=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition hover:text-green-400"
-                >
-                  Join WhatsApp Community
-                </a>
+                <span className="text-gray-400">
+                  India
+                </span>
               </div>
+            </div>
 
-              <div className="flex items-center gap-3">
-                <MapPin className="text-blue-500" size={18} />
-                <span>India</span>
-              </div>
+            {/* Social Links */}
+                        <div className="flex gap-4 mt-8">
+
+              <a
+                href="https://www.linkedin.com/in/kripamay-nath/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-700 text-gray-300 hover:text-blue-400 hover:border-blue-500 transition-all duration-300"
+              >
+                <FaLinkedinIn size={20} />
+              </a>
+
+              <a
+                href="https://github.com/sumannath462-dot"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-700 text-gray-300 hover:text-white hover:border-white transition-all duration-300"
+              >
+                <FaGithub size={20} />
+              </a>
 
             </div>
 
@@ -142,17 +157,23 @@ function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row">
 
-          <p className="text-sm text-gray-500">
+        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-5">
+
+          <p className="text-gray-500 text-center md:text-left">
             © {year} SecondsIncome. All Rights Reserved.
+          </p>
+
+          <p className="text-gray-500 text-sm text-center">
+            Helping Businesses Grow with AI, Automation & Modern Websites.
           </p>
 
           <a
             href="#home"
-            className="rounded-full bg-blue-600 p-3 transition duration-300 hover:-translate-y-1 hover:bg-blue-700"
+            aria-label="Back to Top"
+            className="w-11 h-11 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 transition"
           >
-            <ArrowUp className="text-white" size={20} />
+            <ArrowUp size={20} className="text-white" />
           </a>
 
         </div>
