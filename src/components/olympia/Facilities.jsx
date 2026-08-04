@@ -5,60 +5,62 @@ import {
   Activity,
   ShieldCheck,
   Users,
-  ShowerHead,
+  Bath,
 } from "lucide-react";
 
 const facilities = [
   {
     icon: Dumbbell,
     title: "Modern Equipment",
-    desc: "Latest strength and fitness machines for effective workouts.",
+    desc: "Train with the latest premium strength and cardio machines for maximum performance.",
   },
   {
     icon: HeartPulse,
     title: "Cardio Zone",
-    desc: "Treadmills, cycles and cardio equipment for endurance training.",
+    desc: "Dedicated cardio area with treadmills, bikes and elliptical trainers.",
   },
   {
     icon: Activity,
     title: "Functional Training",
-    desc: "Improve mobility, balance and overall athletic performance.",
+    desc: "Improve mobility, endurance and athletic performance with functional workouts.",
   },
   {
     icon: Users,
     title: "Certified Trainers",
-    desc: "Professional guidance to help you achieve your fitness goals.",
+    desc: "Experienced fitness professionals to guide every step of your transformation.",
   },
   {
     icon: ShieldCheck,
-    title: "Safe Environment",
-    desc: "Clean, hygienic and comfortable workout space for everyone.",
+    title: "Safe & Hygienic",
+    desc: "A clean, sanitized and secure environment for a comfortable workout experience.",
   },
   {
-    icon: ShowerHead,
+    icon: Bath,
     title: "Locker & Shower",
-    desc: "Freshen up after every workout with modern facilities.",
+    desc: "Modern locker rooms and shower facilities to refresh after every session.",
   },
 ];
 
 export default function Facilities() {
   return (
-    <section className="bg-black py-24 px-6">
+    <section
+      id="facilities"
+      className="bg-black py-24 px-6"
+    >
       <div className="max-w-7xl mx-auto">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="text-center"
         >
           <p className="uppercase tracking-[4px] text-yellow-400 font-semibold">
             Our Facilities
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-black text-white">
+          <h2 className="mt-4 text-4xl md:text-5xl font-black text-white leading-tight">
             Everything You Need
             <br />
             <span className="text-yellow-400">
@@ -67,13 +69,13 @@ export default function Facilities() {
           </h2>
 
           <p className="mt-6 max-w-2xl mx-auto text-gray-400 leading-8">
-            Train with premium equipment, expert trainers and a motivating
-            atmosphere designed to help you achieve your fitness goals.
+            Experience premium equipment, expert coaching and world-class
+            facilities designed to help you achieve your fitness goals.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {facilities.map((item, index) => {
             const Icon = item.icon;
 
@@ -82,15 +84,21 @@ export default function Facilities() {
                 key={item.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-8 hover:border-yellow-400 hover:-translate-y-2 transition-all duration-300"
+                whileHover={{
+                  y: -8,
+                }}
+                className="group rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8 transition-all duration-300 hover:border-yellow-400 hover:shadow-[0_0_35px_rgba(250,204,21,0.15)]"
               >
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-yellow-500 text-black">
-                  <Icon size={32} />
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-yellow-400 text-black transition-transform duration-300 group-hover:scale-110">
+                  <Icon size={30} strokeWidth={2.2} />
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-white group-hover:text-yellow-400 transition">
+                <h3 className="mt-6 text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
                   {item.title}
                 </h3>
 
@@ -101,7 +109,6 @@ export default function Facilities() {
             );
           })}
         </div>
-
       </div>
     </section>
   );
