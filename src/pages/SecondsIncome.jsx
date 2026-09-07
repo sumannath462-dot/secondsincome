@@ -1,3 +1,4 @@
+import Certification from "../components/Certification";
 import { useEffect } from "react";
 import AOS from "aos";
 
@@ -38,6 +39,7 @@ export default function SecondsIncome() {
       <Pricing />
       <Process />
       <About />
+      <Certification />
       <ContactCTA />
       <ContactForm />
       <Testimonials />
