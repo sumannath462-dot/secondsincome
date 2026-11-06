@@ -11,88 +11,103 @@ import {
 
 const projects = [
   {
-    title: "Banking Analytics Platform",
-    category: "Banking & Data Analytics",
+    title: "Keen Dashboard",
+    category: "Dashboard Design",
     description:
-      "Enterprise-grade banking analytics solution built from 12+ years of banking domain experience. Interactive KPIs, customer insights, operational performance, and executive reporting.",
-    icon: Building2,
-    badge: "12+ Years Experience",
+      "A dashboard interface concept presented as a live preview. Explore the layout and user experience.",
+    icon: LineChart,
+    badge: "Live Preview",
     gradient: "from-blue-600 to-cyan-500",
-    features: [
-      "Executive KPI Dashboard",
-      "Customer Analytics",
-      "Risk & Performance",
-    ],
+    features: ["Dashboard Interface", "Data-focused Layout", "Web Design"],
+    demoUrl: "https://preview--keen-dashboard-co.lovable.app/?__lovable_sha=83680586",
   },
   {
-    title: "AI Business Automation",
-    category: "Artificial Intelligence",
+    title: "Pallavi Bridal Glow",
+    category: "Beauty & Bridal Website",
     description:
-      "Automated business workflows using AI, reducing repetitive tasks and improving productivity with intelligent automation.",
-    icon: Bot,
-    badge: "AI Automation",
+      "A bridal and beauty-focused website preview designed to showcase services and create an elegant online presence.",
+    icon: Building2,
+    badge: "Live Preview",
     gradient: "from-violet-600 to-fuchsia-500",
-    features: [
-      "Workflow Automation",
-      "AI Chatbots",
-      "Process Optimization",
-    ],
+    features: ["Bridal Showcase", "Service Presentation", "Responsive Preview"],
+    demoUrl: "https://preview--pallavi-bridal-glow.lovable.app/?__lovable_sha=39111113",
   },
   {
-    title: "Modern Business Website",
+    title: "La Belleza Showcase",
+    category: "Beauty Business Website",
+    description:
+      "A beauty business website concept with a visual showcase and service-focused presentation.",
+    icon: Globe,
+    badge: "Live Preview",
+    gradient: "from-emerald-600 to-teal-500",
+    features: ["Business Showcase", "Service Presentation", "Web Design"],
+    demoUrl: "https://preview--la-belleza-showcase.lovable.app/?__lovable_sha=6c677092",
+  },
+  {
+    title: "Pixel Perfect Website Replica",
     category: "Website Development",
     description:
-      "Fast, responsive, SEO-optimized business website developed with modern technologies for maximum performance and conversions.",
+      "A website recreation preview demonstrating attention to interface layout and visual details.",
     icon: Globe,
-    badge: "Responsive",
-    gradient: "from-emerald-600 to-teal-500",
-    features: [
-      "Responsive Design",
-      "Fast Performance",
-      "SEO Optimized",
-    ],
-  },
-  {
-    title: "Advanced Excel Dashboard",
-    category: "Excel Analytics",
-    description:
-      "Professional Excel dashboard featuring automated reporting, interactive charts, financial analysis, and business intelligence.",
-    icon: BarChart3,
-    badge: "Excel Expert",
+    badge: "Live Preview",
     gradient: "from-green-600 to-lime-500",
-    features: [
-      "Interactive Reports",
-      "Dynamic Charts",
-      "Automated Analysis",
-    ],
+    features: ["Interface Recreation", "Visual Layout", "Web Development"],
+    demoUrl: "https://preview--pixel-perfect-replicator-927.lovable.app/?__lovable_receipt=mat_0a2ean4yff8m4teejte4ff3nfk",
   },
   {
-    title: "Power BI Executive Dashboard",
-    category: "Business Intelligence",
+    title: "Event Sketches",
+    category: "Event Planning Website",
     description:
-      "Interactive Power BI dashboards delivering real-time insights, executive reporting, and data-driven decision support.",
-    icon: LineChart,
-    badge: "Power BI",
-    gradient: "from-amber-500 to-orange-500",
-    features: [
-      "Executive Reports",
-      "Data Visualization",
-      "Live Insights",
-    ],
-  },
-  {
-    title: "AI Growth & Digital Strategy",
-    category: "Business Growth",
-    description:
-      "Strategic AI consulting, digital transformation, automation roadmap, and scalable growth planning for modern businesses.",
+      "An event services website preview presenting event offerings, venues, gallery content, and enquiry options.",
     icon: BrainCircuit,
-    badge: "Strategy",
+    badge: "Client Project",
+    gradient: "from-amber-500 to-orange-500",
+    features: ["Event Services", "Venue Showcase", "Enquiry Experience"],
+    demoUrl: "https://preview--precise-plan-show.lovable.app/?__lovable_receipt=mat_7txaqxqg6897yr1ppfvrkkmxqe",
+  },
+  {
+    title: "Royal Vibe Showcase",
+    category: "Website Showcase",
+    description:
+      "A live website preview for exploring the visual presentation and page experience.",
+    icon: Building2,
+    badge: "Live Preview",
     gradient: "from-pink-600 to-rose-500",
-    features: [
-      "Growth Planning",
-      "Digital Strategy",
-      "AI Consulting",
-    ],
+    features: ["Visual Showcase", "Page Layout", "Web Design"],
+    demoUrl: "https://preview--royal-vibe-showcase.lovable.app/?__lovable_sha=694b163b",
+  },
+  {
+    title: "Sukanya Makeover",
+    category: "Salon & Makeover Website",
+    description:
+      "A makeover business website preview designed to present beauty services and the brand online.",
+    icon: Globe,
+    badge: "Live Preview",
+    gradient: "from-fuchsia-600 to-pink-500",
+    features: ["Makeover Services", "Brand Presentation", "Responsive Preview"],
+    demoUrl: "https://preview--sukanya-makeover-elegance.lovable.app/?__lovable_sha=00efec7d",
+  },
+  {
+    title: "Business Website Preview",
+    category: "Website Development",
+    description:
+      "An additional website preview. Open the demo to explore the current project.",
+    icon: Bot,
+    badge: "Live Preview",
+    gradient: "from-indigo-600 to-blue-500",
+    features: ["Website Preview", "Interface Design", "Web Experience"],
+    demoUrl: "https://id-preview--be705b95-9d18-4f69-ac54-a1e2565ca00e.lovable.app/?__lovable_receipt=mat_0bhh2zcq9f8kgb7rhxnqnpeqgm",
+  },
+  {
+    title: "Olympia Gym",
+    category: "Fitness Centre Website",
+    description:
+      "A gym website demo showcasing a fitness business online.",
+    icon: BarChart3,
+    badge: "Website Demo",
+    gradient: "from-cyan-600 to-teal-500",
+    features: ["Gym Website", "Fitness Business Showcase", "Enquiry Experience"],
+    demoUrl: "https://www.secondsincome.club/olympia",
   },
 ];
 
@@ -124,9 +139,8 @@ export default function Portfolio() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-400">
-            Explore some of our work across AI automation, website development,
-            banking analytics, dashboards, business intelligence, and digital
-            transformation solutions designed to help businesses grow faster.
+            Explore selected website and dashboard previews from SecondsIncome.
+            Open a project to view its demo.
           </p>
         </div>
 
@@ -174,13 +188,16 @@ export default function Portfolio() {
                   ))}
                 </div>
 
-                <button
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center gap-2 font-semibold text-cyan-400 transition hover:text-cyan-300"
-                  type="button"
+                  aria-label={`View ${project.title} demo (opens in a new tab)`}
                 >
-                  Learn More
+                  View Live Demo
                   <ExternalLink className="h-4 w-4 transition group-hover:translate-x-1" />
-                </button>
+                </a>
 
                 <div
                   className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${project.gradient} scale-x-0 transition-transform duration-500 group-hover:scale-x-100`}
@@ -201,9 +218,9 @@ export default function Portfolio() {
               </h3>
 
               <p className="mt-4 text-lg leading-8 text-slate-300">
-                Whether you need AI automation, a modern website, dashboards,
-                banking analytics, or digital growth solutions, SecondsIncome
-                can help transform your ideas into measurable business results.
+                Whether you need a modern website, dashboards, business
+                automation, or digital growth solutions, SecondsIncome can help
+                turn your ideas into a professional online experience.
               </p>
             </div>
 
