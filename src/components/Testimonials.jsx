@@ -1,72 +1,18 @@
-import { Quote } from "lucide-react";
+import { CheckCircle2, MessageCircle, ShieldCheck } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Your Success Story",
-    company: "Could Be Next",
-    review:
-      "We're currently accepting new projects and would love to help your business grow with AI, websites, automation, and digital marketing.",
-  },
-  {
-    name: "Let's Build Together",
-    company: "Start Your Journey",
-    review:
-      "Every successful business starts with a single step. Let's build your online presence and grow your business together.",
-  },
-  {
-    name: "Quality You Can Trust",
-    company: "Professional Services",
-    review:
-      "We focus on delivering modern websites, AI solutions, and long-term business growth with transparent communication and quality work.",
-  },
+const promises = [
+  {icon:CheckCircle2,title:"Clear Scope",body:"We discuss your requirements, deliverables, and timeline before work begins."},
+  {icon:MessageCircle,title:"Direct Communication",body:"You can ask questions, share feedback, and stay informed during the project."},
+  {icon:ShieldCheck,title:"Practical Delivery",body:"The goal is a solution you can actually use in your website, spreadsheet, dashboard, or workflow."},
 ];
 
-function Testimonials() {
+export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-slate-950 py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="text-blue-400 font-semibold uppercase tracking-wider">
-            Testimonials
-          </span>
-
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
-            What Clients Say
-          </h2>
-
-          <p className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg">
-            We focus on delivering quality work, long-term relationships, and
-            measurable business growth.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="bg-slate-900 border border-slate-800 rounded-3xl p-8 hover:border-blue-500 transition duration-300"
-            >
-              <Quote className="text-blue-400 mb-6" size={40} />
-
-              <p className="text-gray-300 leading-7 mb-8">
-                "{item.review}"
-              </p>
-
-              <div>
-                <h4 className="text-white font-bold text-lg">
-                  {item.name}
-                </h4>
-
-                <p className="text-blue-400">
-                  {item.company}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section id="working-together" className="bg-slate-900 py-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <div className="mx-auto mb-12 max-w-3xl text-center"><p className="font-semibold uppercase tracking-wider text-blue-400">Working Together</p><h2 className="mt-4 text-3xl font-extrabold text-white sm:text-4xl">A Straightforward Project Experience</h2><p className="mt-4 leading-7 text-slate-400">No made-up testimonials or one-size-fits-all promises. Here is what you can expect when we work together.</p></div>
+        <div className="grid gap-6 md:grid-cols-3">{promises.map(({icon:Icon,title,body})=><article key={title} className="rounded-2xl border border-slate-800 bg-slate-950 p-7"><span className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400"><Icon size={24}/></span><h3 className="text-xl font-bold text-white">{title}</h3><p className="mt-3 leading-7 text-slate-400">{body}</p></article>)}</div>
       </div>
     </section>
   );
 }
-
-export default Testimonials;
