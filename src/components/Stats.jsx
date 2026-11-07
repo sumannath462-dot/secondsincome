@@ -1,74 +1,18 @@
-import {
-  Bot,
-  Code2,
-  Zap,
-  ShieldCheck,
-} from "lucide-react";
+import { Code2, FileSpreadsheet, BarChart3, Workflow } from "lucide-react";
 
-const stats = [
-  {
-    icon: Bot,
-    number: "AI",
-    title: "AI-Powered Solutions",
-  },
-  {
-    icon: Code2,
-    number: "Modern",
-    title: "Development",
-  },
-  {
-    icon: Zap,
-    number: "Fast",
-    title: "Delivery",
-  },
-  {
-    icon: ShieldCheck,
-    number: "24/7",
-    title: "Dedicated Support",
-  },
+const items = [
+  {icon: Code2, title: "Website Development", detail: "Modern & responsive"},
+  {icon: FileSpreadsheet, title: "Excel Solutions", detail: "Trackers & automation"},
+  {icon: BarChart3, title: "Power BI", detail: "Interactive dashboards"},
+  {icon: Workflow, title: "Business Workflows", detail: "Practical automation"},
 ];
 
-function Stats() {
+export default function Stats() {
   return (
-    <section
-      className="bg-white py-20"
-      data-aos="fade-up"
-    >
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
-          {stats.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={index}
-                data-aos="zoom-in"
-                data-aos-delay={index * 150}
-                className="rounded-2xl bg-gray-50 p-8 text-center shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <Icon
-                  className="mx-auto mb-5 text-blue-600"
-                  size={42}
-                />
-
-                <h2 className="text-3xl font-bold text-gray-900">
-                  {item.number}
-                </h2>
-
-                <p className="mt-2 text-gray-600 font-medium">
-                  {item.title}
-                </p>
-              </div>
-            );
-          })}
-
-        </div>
-
+    <section className="border-b border-slate-100 bg-white py-12" data-aos="fade-up">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 px-5 sm:px-6 lg:grid-cols-4">
+        {items.map(({icon: Icon,title,detail}) => <div key={title} className="flex items-center gap-3 rounded-xl bg-slate-50 p-4 sm:p-5"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-700"><Icon size={22}/></span><span><span className="block text-sm font-bold text-slate-900 sm:text-base">{title}</span><span className="mt-1 block text-xs text-slate-500 sm:text-sm">{detail}</span></span></div>)}
       </div>
     </section>
   );
 }
-
-export default Stats;
