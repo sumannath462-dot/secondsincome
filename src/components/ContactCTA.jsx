@@ -1,38 +1,14 @@
-function ContactCTA() {
+import { ArrowRight } from "lucide-react";
+
+export default function ContactCTA() {
   return (
-    <section className="bg-blue-600 text-white py-24">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-
-        <h2 className="text-5xl font-bold">
-          Ready to Build Your Second Income?
-        </h2>
-
-        <p className="mt-6 text-xl text-blue-100">
-          Let's discuss your business goals and discover how AI,
-          automation, and modern websites can help you grow faster.
-        </p>
-
-        <div className="mt-10 flex flex-col md:flex-row justify-center gap-5">
-
-          <a
-            href="#contact"
-            className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition"
-          >
-            Book Free Consultation
-          </a>
-
-          <a
-            href="#contact"
-            className="border-2 border-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-700 transition"
-          >
-            Contact Us
-          </a>
-
-        </div>
-
+    <section className="bg-gradient-to-r from-blue-700 to-cyan-600 py-20 text-white">
+      <div className="mx-auto max-w-5xl px-5 text-center sm:px-6">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-100">Have a project in mind?</p>
+        <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl md:text-5xl">Let’s Make Your Work Easier.</h2>
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-blue-50 sm:text-lg">Tell me what you want to build, automate, or understand. We’ll discuss the right solution for your business.</p>
+        <a href="#contact" className="mt-8 inline-flex items-center rounded-xl bg-white px-7 py-4 font-bold text-blue-700 shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-50">Discuss Your Project <ArrowRight className="ml-2" size={18}/></a>
       </div>
     </section>
   );
 }
-
-export default ContactCTA;
